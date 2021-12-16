@@ -7,7 +7,9 @@ import { CreateContactDTO } from './dto/contact.dto';
 @Injectable()
 export class ContactService {
   //
-  constructor(@InjectModel('Contact') private contactModel: Model<Contact>) {}
+  constructor(
+    @InjectModel('Contact') private readonly contactModel: Model<Contact>,
+  ) {}
   //
   async getContacts(): Promise<Contact[]> {
     return this.contactModel.find().exec();

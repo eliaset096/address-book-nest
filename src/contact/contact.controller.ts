@@ -14,7 +14,7 @@ import {
 import { CreateContactDTO } from './dto/contact.dto';
 import { ContactService } from './contact.service';
 
-@Controller('contact')
+@Controller('contacts')
 export class ContactController {
   constructor(private contactService: ContactService) {}
   // Getting all contacts
